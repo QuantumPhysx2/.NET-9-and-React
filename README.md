@@ -39,13 +39,13 @@ How to setup a .NET 9 and above project with React as the frontend framework
 1. Open the "<app-name>.Server.csproj" file.
 2. Add the following elements:
 ```
-  <SpaRoot>..\NotMilestone.Client</SpaRoot>
+  <SpaRoot>..\<REPLACE-app-name>.Client</SpaRoot>
   <SpaProxyLaunchCommand>npm run dev</SpaProxyLaunchCommand>
   <SpaProxyServerUrl>https://localhost:59722</SpaProxyServerUrl>
 ```
 ```
   <ItemGroup>
-    <ProjectReference Include="..\NotMilestone.Client\NotMilestone.Client.esproj">
+    <ProjectReference Include="..\<REPLACE-app-name>.Client\<REPLACE-app-name>.Client.esproj">
   	<ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>
