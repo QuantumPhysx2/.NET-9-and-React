@@ -19,7 +19,7 @@ How to setup a .NET 9 and above project with React as the frontend framework
 (Client)
 1. Create a file "<app-name>.Client.esproj".
 2. Add the following code to the file:
-<code>
+```
   <Project Sdk="Microsoft.VisualStudio.JavaScript.Sdk/1.0.2752196">
     <PropertyGroup>
       <StartupCommand>npm run dev</StartupCommand>
@@ -31,25 +31,25 @@ How to setup a .NET 9 and above project with React as the frontend framework
       <BuildOutputFolder>$(MSBuildProjectDirectory)\dist</BuildOutputFolder>
     </PropertyGroup>
   </Project>
-</code>
+```
 3. Save the changes.
 4. (Visual Studio) Right click on the Visual Studio solution and add the .esproj file you created. This will load the front-end portion of the app.
 
 (Server)
 1. Open the "<app-name>.Server.csproj" file.
 2. Add the following elements:
-<code>
+```
   <SpaRoot>..\NotMilestone.Client</SpaRoot>
   <SpaProxyLaunchCommand>npm run dev</SpaProxyLaunchCommand>
   <SpaProxyServerUrl>https://localhost:59722</SpaProxyServerUrl>
-</code>
-<code>
+```
+```
   <ItemGroup>
     <ProjectReference Include="..\NotMilestone.Client\NotMilestone.Client.esproj">
   	<ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>
-</code>
+```
 3. Install the package: Microsoft.AspNetCore.SpaProxy
 4. Save the changes.
 5. (Visual Studio) Reload the project for the backend portion of the app.
